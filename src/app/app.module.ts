@@ -4,18 +4,18 @@ import {MatButtonModule} from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SideMenuComponent } from './UI/side-menu/side-menu.component';
+import { SideMenuModule } from './UI/side-menu/side-menu.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SideMenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    SideMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
