@@ -1,30 +1,41 @@
 import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatButtonModule } from '@angular/material/button';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SideMenuModule } from './UI/side-menu/side-menu.module';
 import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { ReactiveFormsModule } from '@angular/forms';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatChipsModule } from '@angular/material/chips';
+import { SideMenuContainerComponent } from './UI/side-menu-container/side-menu-container.component';
+import { SideMenuComponent } from './UI/side-menu-container/side-menu/side-menu.component';
+
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    SideMenuContainerComponent,
+    SideMenuComponent
   ],
   imports: [
+    ReactiveFormsModule,
+    MatFormFieldModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    SideMenuModule,
     MatInputModule,
-    MatFormFieldModule,
-    ReactiveFormsModule
+    MatSidenavModule,
+    MatChipsModule,
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }

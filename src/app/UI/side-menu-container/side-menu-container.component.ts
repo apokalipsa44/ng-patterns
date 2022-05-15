@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-side-menu-container',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-menu-container.component.scss']
 })
 export class SideMenuContainerComponent implements OnInit {
-
+searchForm!: FormGroup;
   constructor() { }
 
   ngOnInit(): void {
+this.searchForm=new FormGroup({
+  keywords:new FormControl('')
+}) 
   }
 
 }
