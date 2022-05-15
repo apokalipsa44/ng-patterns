@@ -7,13 +7,14 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./side-menu-container.component.scss']
 })
 export class SideMenuContainerComponent implements OnInit {
-searchForm!: FormGroup;
+  searchForm!: FormGroup;
+  
   constructor() { }
 
   ngOnInit(): void {
-this.searchForm=new FormGroup({
-  keywords:new FormControl('')
-}) 
+    this.searchForm = new FormGroup({
+      keywords: new FormControl('')
+    })
   }
 
 }
